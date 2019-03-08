@@ -6,7 +6,7 @@
 
 #define HEATER_TRIGGER 3
 #define SET_POINT_1 210
-#define MAX_TRIGGER_DELAY 7400 // bu değer deneyerek bulunacak
+#define MAX_TRIGGER_DELAY 7400 
 #define TEMP_READ_DELAY 500
 #define thermoDO 9
 #define thermoCS 10
