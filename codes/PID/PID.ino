@@ -103,15 +103,14 @@ void loop()
 
 }
 ISR(PCINT0_vect){
-  if(PINB & B00000001){            //We make an AND with the state register, We verify if pin D8 is HIGH???
-    if(last_CH1_state == 0){       //If the last state was 0, then we have a state change...
-      zero_cross_detected = true;  //We have detected a state change! We need both falling and rising edges
+  if(PINB & B00000001){          
+    if(last_CH1_state == 0){     
+      zero_cross_detected = true;
     }
   }
-  else if(last_CH1_state == 1){    //If pin 8 is LOW and the last state was HIGH then we have a state change      
-    zero_cross_detected = true;    //We haev detected a state change!  We need both falling and rising edges.
-    last_CH1_state = 0;            //Store the current state into the last state for the next loop
-    }
+  else if(last_CH1_state == 1){        
+    zero_cross_detected = true;  
+    last_CH1_state = 0;              }
   }
 
 
